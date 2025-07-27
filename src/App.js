@@ -1,23 +1,51 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Scoreboard from './components/Scoreboard';
+import JeopardyBoard from './components/JeopardyBoard';
+import QuestionModal from './components/QuestionModal';
 
 function App() {
+  const [scores, setScores] = useState([0, 0, 0, 0]);
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [viewedQuestions, setViewedQuestions] = useState(new Set());
+
+  const handleScoreChange = (teamIndex, newScore) => {
+    const newScores = [...scores];
+    newScores[teamIndex] = parseInt(newScore) || 0;
+    setScores(newScores);
+  };
+
+  const handleQuestionClick = (categoryIndex, valueIndex) => {
+    const questionKey = `${categoryIndex}-${valueIndex}`;
+    if (!viewedQuestions.has(questionKey)) {
+      setSelectedQuestion({ categoryIndex, valueIndex });
+    }
+  };
+
+  const handleCloseModal = () => {
+    if (selectedQuestion) {
+      const questionKey = `${selectedQuestion.categoryIndex}-${selectedQuestion.valueIndex}`;
+      setViewedQuestions(prev => new Set([...prev, questionKey]));
+      setSelectedQuestion(null);
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>JEOPARDY!</h1>
       </header>
+      <Scoreboard scores={scores} onScoreChange={handleScoreChange} />
+      <JeopardyBoard 
+        onQuestionClick={handleQuestionClick}
+        viewedQuestions={viewedQuestions}
+      />
+      {selectedQuestion && (
+        <QuestionModal
+          question={selectedQuestion}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 }

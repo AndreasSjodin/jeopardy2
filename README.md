@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# Jeopardy Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based Jeopardy game board with interactive features, team scoring, and a beautiful UI.
+
+## Features
+
+- **Interactive Game Board**: 6x5 grid with categories and dollar values
+- **Team Scoreboard**: 4 teams with editable score inputs
+- **Question Modal**: Click on any cell to view the full question and answer
+- **Viewed State**: Questions are marked as viewed after being clicked
+- **Responsive Design**: Works on desktop and mobile devices
+- **Easily Customizable**: All game data is centralized and easily exchangeable
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm start
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## How to Play
+
+1. **Team Setup**: Enter initial scores for your 4 teams in the scoreboard at the top
+2. **Select Questions**: Click on any dollar amount cell to view the question
+3. **View Questions**: The modal will show the full question text
+4. **Show Answer**: Click "Show Answer" to reveal the correct answer
+5. **Update Scores**: Modify team scores as needed during gameplay
+6. **Track Progress**: Viewed questions are marked with a different appearance
+
+## Customizing the Game
+
+### Changing Game Data
+
+All game data is stored in `src/data/jeopardyData.js`. To create your own game:
+
+1. **Categories**: Modify the `categories` array with your 6 category names
+2. **Questions**: Update the `questions` array with your questions and answers
+3. **Values**: Change the `values` array if you want different dollar amounts
+
+### Data Structure
+
+```javascript
+export const jeopardyData = {
+  categories: ["CATEGORY 1", "CATEGORY 2", ...], // 6 categories
+  questions: [
+    // Array of 6 categories, each containing 5 questions
+    [
+      { question: "Your question here?", answer: "What is the answer?" },
+      // ... 4 more questions
+    ],
+    // ... 5 more categories
+  ],
+  values: [200, 400, 600, 800, 1000] // Dollar amounts
+};
+```
+
+### Example Customization
+
+```javascript
+// Change categories
+categories: ["HISTORY", "SCIENCE", "LITERATURE", "SPORTS", "MOVIES", "GEOGRAPHY"]
+
+// Change dollar values
+values: [100, 200, 300, 400, 500]
+
+// Add your own questions
+questions: [
+  [
+    { question: "Who was the first President of the United States?", answer: "Who is George Washington?" },
+    // ... more questions
+  ],
+  // ... more categories
+]
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Scoreboard.js          # Team score display and editing
+│   ├── JeopardyBoard.js       # Main game board
+│   ├── QuestionModal.js       # Question/answer modal
+│   └── *.css                  # Component styles
+├── data/
+│   └── jeopardyData.js        # Game data (easily customizable)
+├── App.js                     # Main application component
+└── App.css                    # Global styles
+```
+
+## Features in Detail
+
+### Scoreboard
+- 4 team scores displayed horizontally
+- Editable HTML inputs for real-time score updates
+- Responsive design that works on all screen sizes
+
+### Game Board
+- 6 categories across the top
+- 5 dollar values per category ($200-$1000)
+- Clickable cells with hover effects
+- Viewed questions are visually marked
+
+### Question Modal
+- Full-screen overlay with blur effect
+- Displays category and dollar amount
+- Two-step process: question first, then answer
+- Close button to return to game board
+
+## Styling
+
+The game uses a modern, Jeopardy-inspired design with:
+- Blue gradient backgrounds
+- Gold accents (#ffd700)
+- Smooth animations and transitions
+- Responsive grid layouts
+- Glass-morphism effects
+
+## Browser Support
+
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (not recommended)
 
-### `npm start`
+## Contributing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Feel free to customize the game data, add new features, or improve the styling. The modular component structure makes it easy to extend and modify.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## License
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the MIT License.
