@@ -32,9 +32,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>JEOPARDY!</h1>
-      </header>
       <Scoreboard scores={scores} onScoreChange={handleScoreChange} />
       <JeopardyBoard 
         onQuestionClick={handleQuestionClick}

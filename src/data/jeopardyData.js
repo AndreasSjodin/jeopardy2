@@ -1,61 +1,61 @@
 // Jeopardy game data - easily exchangeable
 export const jeopardyData = {
   categories: [
-    "ROM COMS",
-    "THE PRINCESS BRIDE",
-    "27 DRESSES", 
-    "LOVE, ACTUALLY",
-    "FAILURE TO LUNCH",
-    "SWEET HOME ALABAMA"
+    "JESUS LIV",
+    "BIBELNS BÖCKER",
+    "LÄRJUNGARNA",
+    "KRISTNA FESTER",
+    "BÖNER OCH PSALMER",
+    "KRISTET LIV"
   ],
   questions: [
-    // ROM COMS
+    // JESUS LIV
     [
-      { question: "This 1990 film starring Julia Roberts and Richard Gere features a prostitute who falls in love with a wealthy businessman.", answer: "What is Pretty Woman?" },
-      { question: "In this 2001 film, Bridget Jones writes in her diary about her love life and struggles with weight.", answer: "What is Bridget Jones's Diary?" },
-      { question: "This 2003 film starring Hugh Grant and Drew Barrymore is about a man who falls in love with a woman who has amnesia.", answer: "What is About a Boy?" },
-      { question: "In this 1999 film, a woman discovers her fiancé is cheating and moves to Tuscany to start a new life.", answer: "What is Under the Tuscan Sun?" },
-      { question: "This 2002 film starring Reese Witherspoon is about a woman who goes to law school to win back her ex-boyfriend.", answer: "What is Legally Blonde?" }
+      { question: "I vilken stad föddes Jesus enligt Bibeln?", answer: "Vad är Betlehem?" },
+      { question: "Vilket yrke hade Jesus far Josef?", answer: "Vad är snickare?" },
+      { question: "Vem döpte Jesus i Jordanfloden?", answer: "Vem är Johannes Döparen?" },
+      { question: "Hur många dagar fastade Jesus i öknen?", answer: "Vad är 40 dagar?" },
+      { question: "Vilken stad dog Jesus i enligt Bibeln?", answer: "Vad är Jerusalem?" }
     ],
-    // THE PRINCESS BRIDE
+    // BIBELNS BÖCKER
     [
-      { question: "What is the name of the farm boy who becomes the Dread Pirate Roberts?", answer: "Who is Westley?" },
-      { question: "What is the name of the giant who befriends Westley?", answer: "Who is Fezzik?" },
-      { question: "What is the name of the Sicilian who helps Westley rescue Buttercup?", answer: "Who is Inigo Montoya?" },
-      { question: "What is the name of the prince who wants to marry Buttercup?", answer: "Who is Prince Humperdinck?" },
-      { question: "What is the name of the kingdom where the story takes place?", answer: "What is Florin?" }
+      { question: "Vilken är den första boken i Gamla testamentet?", answer: "Vad är Första Moseboken?" },
+      { question: "Vilken bok handlar om Noa och den stora floden?", answer: "Vad är Andra Moseboken?" },
+      { question: "Vilken bok i Nya testamentet handlar om Jesus födelse?", answer: "Vad är Matteus?" },
+      { question: "Vilken bok skrev Paulus flest brev till?", answer: "Vad är Romarbrevet?" },
+      { question: "Vilken är den sista boken i Bibeln?", answer: "Vad är Uppenbarelseboken?" }
     ],
-    // 27 DRESSES
+    // LÄRJUNGARNA
     [
-      { question: "What is the name of the main character played by Katherine Heigl?", answer: "Who is Jane?" },
-      { question: "What is the name of Jane's sister who gets engaged to Jane's boss?", answer: "Who is Tess?" },
-      { question: "What is the name of the journalist who falls in love with Jane?", answer: "Who is Kevin?" },
-      { question: "How many times has Jane been a bridesmaid?", answer: "What is 27?" },
-      { question: "What does Jane keep in her closet that represents all her bridesmaid experiences?", answer: "What are bridesmaid dresses?" }
+      { question: "Vilken lärjunge förrådde Jesus för 30 silverpenningar?", answer: "Vem är Judas Iskariot?" },
+      { question: "Vilken lärjunge förnekade Jesus tre gånger?", answer: "Vem är Petrus?" },
+      { question: "Vad heter lärljungarna när de blev utsända?", answer: "Vem är apostlarna?" },
+      { question: "Vilken lärjunge kallades 'tvivlaren'?", answer: "Vem är Tomas?" },
+      { question: "Vilka upptäckte att graven var tom?", answer: "Vem är Maria Magdalena och Maria Jakobus?" }
     ],
-    // LOVE, ACTUALLY
+    // KRISTNA FESTER
     [
-      { question: "What is the name of the British Prime Minister played by Hugh Grant?", answer: "Who is David?" },
-      { question: "What is the name of the writer who goes to France to write a book?", answer: "Who is Jamie?" },
-      { question: "What is the name of the rock star played by Bill Nighy?", answer: "Who is Billy Mack?" },
-      { question: "What is the name of the little boy who is in love with his classmate?", answer: "Who is Sam?" },
-      { question: "What is the name of the American woman the Prime Minister falls in love with?", answer: "Who is Natalie?" }
+      { question: "När firar vi Jesu födelse?", answer: "Vad är Jul?" },
+      { question: "Vilken fest firas 40 dagar efter påsk?", answer: "Vad är Kristi himmelsfärdsdag?" },
+      { question: "Vad hände på bröllopet i Kaana?", answer: "Jesus gjorde vatten till vin" },
+      { question: "När dör jesus på korset?", answer: "När är långfredagen?" },
+      { question: "Vilken fest firas 40 dagar före påsk?", answer: "Vad är fastan?" }
     ],
-    // FAILURE TO LUNCH
+    // BÖNER OCH PSALMER
     [
-      { question: "This term describes when a startup company fails to gain traction in the market.", answer: "What is a flop?" },
-      { question: "This phrase refers to a business that never gets off the ground.", answer: "What is 'dead on arrival'?" },
-      { question: "This term describes when a product launch doesn't meet expectations.", answer: "What is a dud?" },
-      { question: "This phrase refers to a failed business venture.", answer: "What is 'going belly up'?" },
-      { question: "This term describes when a company runs out of money and fails.", answer: "What is bankruptcy?" }
+      { question: "Vilken bön lärde Jesus sina lärjungar?", answer: "Vad är Fader vår?" },
+      { question: "Vilken psalm handlar om att Herren är min herde?", answer: "Vad är Psalm 23?" },
+      { question: "Vilken bön säger 'Gud välsigne dig och bevara dig'?", answer: "Vad är välsignelsen?" },
+      { question: "Vem sade 'Herre visa mig vägen och gör mig villig att vandra den'?", answer: "Vem är Heliga Birgitta" },
+      { question: "Vad heter psalm 767?", answer: "Möt mig nu som den jag är" }
     ],
-    // SWEET HOME ALABAMA
+    // KRISTET LIV
     [
-      { question: "What is the name of the main character played by Reese Witherspoon?", answer: "Who is Melanie Carmichael?" },
-      { question: "What is the name of Melanie's hometown in Alabama?", answer: "What is Pigeon Creek?" },
-      { question: "What is the name of Melanie's childhood sweetheart?", answer: "Who is Jake Perry?" },
-      { question: "What is the name of Melanie's fiancé in New York?", answer: "Who is Andrew Hennings?" },
-      { question: "What is the name of the jewelry store Melanie owns in New York?", answer: "What is Carmine's?" }
+      { question: "Vilka är de tre kristna dygderna?", answer: "Vad är tro, hopp och kärlek?" },
+      { question: "Vilket är det första budordet?", answer: "Vad är 'Du skall icke hava andra gudar'?" },
+      { question: "Vilket sakrament ger dig tillträde till kyrkan?", answer: "Vad är dopet?" },
+      { question: "Vilket sakrament firas varje söndag i kyrkan?", answer: "Vad är nattvarden?" },
+      { question: "Vilken är den största av alla dygder enligt Paulus?", answer: "Vad är kärleken?" }
     ]
   ],
   values: [200, 400, 600, 800, 1000]

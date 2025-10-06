@@ -4,11 +4,10 @@ import './Scoreboard.css';
 const Scoreboard = ({ scores, onScoreChange }) => {
   return (
     <div className="scoreboard">
-      <h2>Team Scores</h2>
       <div className="scoreboard-grid">
         {scores.map((score, index) => (
           <div key={index} className="team-score">
-            <label htmlFor={`team-${index + 1}`}>Team {index + 1}</label>
+            <label htmlFor={`team-${index + 1}`}>Lag {index + 1}</label>
             <input
               id={`team-${index + 1}`}
               type="number"

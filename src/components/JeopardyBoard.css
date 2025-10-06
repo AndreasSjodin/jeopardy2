@@ -17,7 +17,7 @@
 .category-header {
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
-  padding: 15px 10px;
+  padding: 2px 2px;
   border: 3px solid #ffd700;
   border-radius: 8px;
   font-weight: bold;
@@ -34,7 +34,7 @@
 .question-cell {
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: #ffd700;
-  padding: 20px 10px;
+  padding: 5px 10px;
   border: 3px solid #ffd700;
   border-radius: 8px;
   font-weight: bold;
@@ -78,7 +78,7 @@
   }
   
   .category-header {
-    padding: 10px 5px;
+    padding: 2px 2px;
     font-size: 0.9rem;
     min-height: 60px;
   }
