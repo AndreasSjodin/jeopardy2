@@ -4,6 +4,29 @@
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
   padding: 20px;
+  position: relative;
+}
+
+.admin-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.admin-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
 }
 
 .App-header {

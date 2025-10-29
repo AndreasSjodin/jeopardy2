@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './QuestionModal.css';
-import { jeopardyData } from '../data/jeopardyData';
+import { getJeopardyData } from '../utils/dataManager';
 
 const QuestionModal = ({ question, onClose }) => {
   const [showAnswer, setShowAnswer] = useState(false);
+  const jeopardyData = getJeopardyData();
   
   const { categoryIndex, valueIndex } = question;
   const category = jeopardyData.categories[categoryIndex];

@@ -3,11 +3,13 @@ import './App.css';
 import Scoreboard from './components/Scoreboard';
 import JeopardyBoard from './components/JeopardyBoard';
 import QuestionModal from './components/QuestionModal';
+import AdminModal from './components/AdminModal';
 
 function App() {
   const [scores, setScores] = useState([0, 0, 0, 0]);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [viewedQuestions, setViewedQuestions] = useState(new Set());
+  const [showAdmin, setShowAdmin] = useState(false);
 
   const handleScoreChange = (teamIndex, newScore) => {
     const newScores = [...scores];
@@ -32,6 +34,9 @@ function App() {
 
   return (
     <div className="App">
+      <button className="admin-toggle-btn" onClick={() => setShowAdmin(true)}>
+        ⚙️ Admin
+      </button>
       <Scoreboard scores={scores} onScoreChange={handleScoreChange} />
       <JeopardyBoard 
         onQuestionClick={handleQuestionClick}
@@ -42,6 +47,9 @@ function App() {
           question={selectedQuestion}
           onClose={handleCloseModal}
         />
+      )}
+      {showAdmin && (
+        <AdminModal onClose={() => setShowAdmin(false)} />
       )}
     </div>
   );

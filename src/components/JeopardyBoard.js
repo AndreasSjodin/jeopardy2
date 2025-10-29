@@ -1,8 +1,10 @@
 import React from 'react';
 import './JeopardyBoard.css';
-import { jeopardyData } from '../data/jeopardyData';
+import { getJeopardyData } from '../utils/dataManager';
 
 const JeopardyBoard = ({ onQuestionClick, viewedQuestions }) => {
+  const jeopardyData = getJeopardyData();
+  
   return (
     <div className="jeopardy-board">
       <div className="board-grid">
